@@ -1,5 +1,5 @@
 
-# Webtrees Custom Module: Shared Places
+# Webtrees Custom Module: ⚶ Shared Places
 
 This [webtrees](https://www.webtrees.net/) custom module supports shared places. It hooks into an extended 'Facts and Events' tab, enhancing places with data obtained from the respective shared place.
 The project’s website is [cissee.de](https://cissee.de).
@@ -23,7 +23,7 @@ The project’s website is [cissee.de](https://cissee.de).
 
 ### Download<a name="download"/>
 
-* Current version: 1.7.9.3
+* Current version: 1.7.9.4
 * Based on and tested with webtrees 1.7.9, may also work with older 1.7.x versions.
 * Requires the Hooks module ('hooks_repackaged', or the original Hooks module via webtrees-geneajaubart). Requires the 'personal_facts_with_hooks' module.
 * Download the zipped module, including all required dependencies, [here](https://cissee.de/cissee.webtrees.custom.models.latest.zip).
@@ -41,7 +41,7 @@ The project’s website is [cissee.de](https://cissee.de).
 ### License<a name="license"/>
 
 * **shared_places: a webtrees custom module**
-* Copyright (C) 2017 Richard Cissée
+* Copyright (C) 2017 to 2018 Richard Cissée
 * Derived from **webtrees** - Copyright (C) 2010 to 2016  webtrees development team.
 * Derived from **webtrees-geneajaubart** - Copyright (C) 2009 to 2016  Jonathan Jaubart.
 
