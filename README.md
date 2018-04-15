@@ -1,29 +1,80 @@
 
 # Webtrees Custom Module: ⚶ Shared Places
 
-This [webtrees](https://www.webtrees.net/) custom module supports shared places. It hooks into an extended 'Facts and Events' tab, enhancing places with data obtained from the respective shared place.
+This [webtrees](https://www.webtrees.net/) custom module supports shared places as level 0 GEDCOM objects, on the basis of the Gedcom 5.5EL extension. It hooks into an extended 'Facts and Events' tab, enhancing places with data obtained from the respective shared place.
 The project’s website is [cissee.de](https://cissee.de).
 
 ## Contents
 
 * [Features](#features)
+* [Gedcom 5.5EL](#gedcom)
 * [Download](#download)
 * [Installation](#installation)
 * [License](#license)
 
 ### Features<a name="features"/>
 
-* Shared places are handled as top-level _LOC records, containing coordinates, notes, and media.
+* Shared places are handled as level 0 _LOC records, containing coordinates, notes, and media objects.
 * Shared places may be edited and viewed via an additional top-level menu.
 * On the (extended) facts and events tab, shared place data is displayed in addition to regular place data.
-* All shared place data is fully included in the gedcom exported by webtrees (and may also be imported from other sources supporting _LOC records), based on a gedcom extension (Gedcom 5.5EL).
+* All shared place data is fully included in the gedcom exported by webtrees (and may also be imported from other sources supporting _LOC records), on the basis of the Gedcom 5.5EL extension.
 * Geodata is provided to other modules (e.g. for use in maps).
 
 ![SharedPlaces2](SharedPlaces2.png)
 
+### Gedcom 5.5EL<a name="gedcom"/>
+
+The Gedcom 5.5EL extension is described [here](http://wiki-en.genealogy.net/Gedcom_5.5EL). For _LOC records, we additionally allow fields from [this specification](http://wiki-en.genealogy.net/GEDCOM/PLAC-Tag#Agreements_for_PLAC), thus we end up with the following structure:
+
+~~~~
+0 @<XREF:_LOC>@ _LOC
+1 NAME <PLACE_NAME> {1:M}
+2 DATE <DATE_VALUE> {0:1}
+2 _NAMC <PLACE_NAME_ADDITION> {0:1}
+2 ABBR <ABBREVIATION_OF_NAME> {0:M}
+3 TYPE <TYPE_OF_ABBREVIATION> {0:1}
+2 LANG <LANGUAGE_ID> {0:1}
+2 <<SOURCE_CITATION>> {0:M}
+1 TYPE <TYPE_OF_LOCATION> {0:M}
+2 DATE <DATE_VALUE> {0:1}
+2 <<SOURCE_CITATION>> {0:M}
+1 _FPOST <FOKO_POSTCODE> {0:M}
+2 DATE <DATE_VALUE> {0:1}
+1 _POST <POSTAL_CODE> {0:M}
+2 DATE <DATE_VALUE> {0:1}
+2 <<SOURCE_CITATION>> {0:M}
+1 _GOV <GOV_IDENTIFIER> {0:1}
+1 _FSTAE <FOKO_TERRITORY_IDENTIFIER> {0:1}
+1 _FCTRY <FOKO_STATE_IDENTIFIER> {0:1}
+1 MAP {0:1}
+2 LATI <PLACE_LATITUDE> {1:1}
+2 LONG <PLACE_LONGITUDE> {1:1}
+1 _MAIDENHEAD <MAIDENHEAD_LOCATOR> {0:1}
+1 EVEN [<EVENT_DESCRIPTOR>|<NULL>] {0:M}
+2 <<EVENT_DETAIL>> {0:1}
+1 _LOC @<XREF:_LOC>@ 0:M
+2 TYPE <HIERARCHICAL_RELATIONSHIP> {1:1}
+2 DATE <DATE_VALUE> {0:1}
+2 <<SOURCE_CITATION>> {0:M}
+1 _DMGD <DEMOGRAPHICAL_DATA> {0:M}
+2 DATE <DATE_VALUE> {0:1}
+2 <<SOURCE_CITATION>> {0:M}
+2 TYPE <TYPE_OF_DEMOGRAPICAL_DATA> 1:1
+1 _AIDN <ADMINISTRATIVE_IDENTIFIER> {0:M}
+2 DATE <DATE_VALUE> {0:1}
+2 <<SOURCE_CITATION>> {0:M}
+2 TYPE <TYPE_OF_ADMINISTRATIVE_IDENTIFIER> {1:1}
+1 <<MULTIMEDIA_LINK>> {0:M}
+1 <<NOTE_STRUCTURE>> {0:M}
+1 <<SOURCE_CITATION>> {0:M}
+1 <<CHANGE_DATE>> {0:1}
+~~~~
+
+Note that currently only selected parts of this structure are displayed and supported by the editor.
+
 ### Download<a name="download"/>
 
-* Current version: 1.7.9.5
+* Current version: 1.7.9.6
 * Based on and tested with webtrees 1.7.9, may also work with older 1.7.x versions.
 * Requires the Hooks module ('hooks_repackaged', or the original Hooks module via webtrees-geneajaubart). Requires the 'personal_facts_with_hooks' module.
 * Download the zipped module, including all required dependencies, [here](https://cissee.de/vesta.latest.zip).
