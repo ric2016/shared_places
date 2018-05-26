@@ -1,13 +1,13 @@
 
 # Webtrees Custom Module: ⚶ Shared Places
 
-This [webtrees](https://www.webtrees.net/) custom module supports shared places as level 0 GEDCOM objects, on the basis of the Gedcom 5.5EL extension. It hooks into an extended 'Facts and Events' tab, enhancing places with data obtained from the respective shared place.
+This [webtrees](https://www.webtrees.net/) custom module supports shared places as level 0 GEDCOM objects, on the basis of the Gedcom-L agreements. It hooks into an extended 'Facts and Events' tab, enhancing places with data obtained from the respective shared place.
 The project’s website is [cissee.de](https://cissee.de).
 
 ## Contents
 
 * [Features](#features)
-* [Gedcom 5.5EL](#gedcom)
+* [Gedcom-L agreements](#gedcom)
 * [Download](#download)
 * [Installation](#installation)
 * [License](#license)
@@ -17,14 +17,14 @@ The project’s website is [cissee.de](https://cissee.de).
 * Shared places are handled as level 0 _LOC records, containing coordinates, notes, and media objects.
 * Shared places may be edited and viewed via an additional top-level menu.
 * On the (extended) facts and events tab, shared place data is displayed in addition to regular place data.
-* All shared place data is fully included in the gedcom exported by webtrees (and may also be imported from other sources supporting _LOC records), on the basis of the Gedcom 5.5EL extension.
+* All shared place data is fully included in the gedcom exported by webtrees (and may also be imported from other sources supporting _LOC records), on the basis of the Gedcom-L agreements.
 * Geodata is provided to other modules (e.g. for use in maps).
 
 ![SharedPlaces2](SharedPlaces2.png)
 
-### Gedcom 5.5EL<a name="gedcom"/>
+### Gedcom-L agreements<a name="gedcom"/>
 
-The Gedcom 5.5EL extension is described [here](http://wiki-en.genealogy.net/Gedcom_5.5EL). For _LOC records, we additionally allow fields from [this specification](http://wiki-en.genealogy.net/GEDCOM/PLAC-Tag#Agreements_for_PLAC), thus we end up with the following structure:
+The Gedcom-L agreements regarding PLAC are described [here](http://wiki-en.genealogy.net/GEDCOM/PLAC-Tag#Agreements_for_PLAC). They specify with the following structure:
 
 ~~~~
 0 @<XREF:_LOC>@ _LOC
@@ -74,16 +74,18 @@ Note that currently only selected parts of this structure are displayed and supp
 
 ### Download<a name="download"/>
 
-* Current version: 1.7.9.6
+* Current version: 1.7.9.7
 * Based on and tested with webtrees 1.7.9, may also work with older 1.7.x versions.
-* Requires the Hooks module ('hooks_repackaged', or the original Hooks module via webtrees-geneajaubart). Requires the 'personal_facts_with_hooks' module.
-* Download the zipped module, including all required dependencies, [here](https://cissee.de/vesta.latest.zip).
+* Requires the Hooks module ('hooks_repackaged', or the original Hooks module via webtrees-geneajaubart). 
+* Requires the 'vesta_common_lib' module.
+* Displays data via the 'personal_facts_with_hooks' module.
+* Download the zipped module, including all related modules, [here](https://cissee.de/vesta.latest.zip).
 * Support, suggestions, feature requests: <ric@richard-cissee.de>
 * Issues also via <https://github.com/ric2016/shared_places/issues>
 
 ### Installation<a name="installation"/>
 
-* Unzip the files and copy them to the modules_v3 folder of your webtrees installation. All required modules are included in the zip file. It's safe to overwrite the respective directories if they already exist (they are bundled with other custom modules as well), as long as other custom models using these dependencies are also upgraded to their respective latest versions.
+* Unzip the files and copy them to the modules_v3 folder of your webtrees installation. All related modules are included in the zip file. It's safe to overwrite the respective directories if they already exist (they are bundled with other custom modules as well), as long as other custom models using these dependencies are also upgraded to their respective latest versions.
 * Enable the extended 'Facts and Events' module via Control Panel -> Modules -> Module Administration -> Facts and Events.
 * Enable the main module via Control Panel -> Modules -> Module Administration -> Shared Places. After that, you may configure some options.
 * Enable the Hooks module via Control Panel -> Modules -> Module Administration -> Hooks. Make sure all hooks are selected (in the preferences of the Hooks module).				
@@ -95,6 +97,7 @@ Note that currently only selected parts of this structure are displayed and supp
 * Copyright (C) 2017 to 2018 Richard Cissée
 * Derived from **webtrees** - Copyright (C) 2010 to 2016  webtrees development team.
 * Derived from **webtrees-geneajaubart** - Copyright (C) 2009 to 2016  Jonathan Jaubart.
+* French translations provided by Pierre Dousselin.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
