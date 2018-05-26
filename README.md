@@ -24,7 +24,7 @@ The project’s website is [cissee.de](https://cissee.de).
 
 ### Gedcom-L agreements<a name="gedcom"/>
 
-The Gedcom-L agreements regarding PLAC are described [here](http://wiki-en.genealogy.net/GEDCOM/PLAC-Tag#Agreements_for_PLAC). They specify with the following structure:
+The Gedcom-L agreements regarding PLAC are described [here](http://wiki-en.genealogy.net/GEDCOM/PLAC-Tag#Agreements_for_PLAC). They specify the following structure:
 
 ~~~~
 0 @<XREF:_LOC>@ _LOC
