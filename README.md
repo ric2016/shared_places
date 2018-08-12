@@ -74,8 +74,8 @@ Note that currently only selected parts of this structure are displayed and supp
 
 ### Download<a name="download"/>
 
-* Current version: 1.7.9.7
-* Based on and tested with webtrees 1.7.9, may also work with older 1.7.x versions.
+* Current version: 1.7.10.1
+* Based on and tested with webtrees 1.7.10, may also work with older 1.7.x versions.
 * Requires the Hooks module ('hooks_repackaged', or the original Hooks module via webtrees-geneajaubart). 
 * Requires the 'vesta_common_lib' module.
 * Displays data via the 'personal_facts_with_hooks' module.
