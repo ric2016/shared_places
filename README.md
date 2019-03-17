@@ -4,6 +4,8 @@
 This [webtrees](https://www.webtrees.net/) custom module supports shared places as level 0 GEDCOM objects, on the basis of the Gedcom-L agreements. It hooks into an extended 'Facts and Events' tab, enhancing places with data obtained from the respective shared place.
 The project’s website is [cissee.de](https://cissee.de).
 
+This is a webtrees 1.x module - It cannot be used with webtrees 2.x. For its webtrees 2.x counterpart, see [here](https://github.com/vesta-webtrees-2-custom-modules/vesta_shared_places).
+
 ## Contents
 
 * [Features](#features)
@@ -74,14 +76,14 @@ Note that currently only selected parts of this structure are displayed and supp
 
 ### Download<a name="download"/>
 
-* Current version: 1.7.10.2
-* Based on and tested with webtrees 1.7.10, may also work with older 1.7.x versions.
+* Current version: 1.7.13.1
+* Based on and tested with webtrees 1.7.13, may also work with older 1.7.x versions.
 * Requires the Hooks module ('hooks_repackaged', or the original Hooks module via webtrees-geneajaubart). 
 * Requires the 'vesta_common_lib' module.
 * Displays data via the 'personal_facts_with_hooks' module.
 * Download the zipped module, including all related modules, [here](https://cissee.de/vesta.latest.zip).
 * Support, suggestions, feature requests: <ric@richard-cissee.de>
-* Issues also via <https://github.com/ric2016/shared_places/issues>
+* Issues also via <https://github.com/ric2016/shared_places/issues>. Note that new features will only be implemented in the 2.x versions though.
 
 ### Installation<a name="installation"/>
 
@@ -94,7 +96,7 @@ Note that currently only selected parts of this structure are displayed and supp
 ### License<a name="license"/>
 
 * **shared_places: a webtrees custom module**
-* Copyright (C) 2017 to 2018 Richard Cissée
+* Copyright (C) 2017 to 2019 Richard Cissée
 * Derived from **webtrees** - Copyright (C) 2010 to 2016  webtrees development team.
 * Derived from **webtrees-geneajaubart** - Copyright (C) 2009 to 2016  Jonathan Jaubart.
 * French translations provided by Pierre Dousselin.
