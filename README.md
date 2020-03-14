@@ -9,7 +9,7 @@ This is a webtrees 1.x module - It cannot be used with webtrees 2.x. For its web
 ## Contents
 
 * [Features](#features)
-* [Gedcom-L agreements](#gedcom)
+* [Gedcom-L Addendum](#gedcom)
 * [Download](#download)
 * [Installation](#installation)
 * [License](#license)
@@ -24,51 +24,49 @@ This is a webtrees 1.x module - It cannot be used with webtrees 2.x. For its web
 
 ![SharedPlaces2](SharedPlaces2.png)
 
-### Gedcom-L agreements<a name="gedcom"/>
+### Gedcom-L Addendum<a name="gedcom"/>
 
-The Gedcom-L agreements regarding PLAC are described [here](http://wiki-en.genealogy.net/GEDCOM/PLAC-Tag#Agreements_for_PLAC). They specify the following structure:
+The Gedcom-L Addendum to the GEDCOM 5.5.1 specification is available [here](https://genealogy.net/GEDCOM/). It defines the following structure for top-level place records:
 
 ~~~~
-0 @<XREF:_LOC>@ _LOC
-1 NAME <PLACE_NAME> {1:M}
-2 DATE <DATE_VALUE> {0:1}
-2 _NAMC <PLACE_NAME_ADDITION> {0:1}
-2 ABBR <ABBREVIATION_OF_NAME> {0:M}
-3 TYPE <TYPE_OF_ABBREVIATION> {0:1}
-2 LANG <LANGUAGE_ID> {0:1}
-2 <<SOURCE_CITATION>> {0:M}
-1 TYPE <TYPE_OF_LOCATION> {0:M}
-2 DATE <DATE_VALUE> {0:1}
-2 <<SOURCE_CITATION>> {0:M}
-1 _FPOST <FOKO_POSTCODE> {0:M}
-2 DATE <DATE_VALUE> {0:1}
-1 _POST <POSTAL_CODE> {0:M}
-2 DATE <DATE_VALUE> {0:1}
-2 <<SOURCE_CITATION>> {0:M}
-1 _GOV <GOV_IDENTIFIER> {0:1}
-1 _FSTAE <FOKO_TERRITORY_IDENTIFIER> {0:1}
-1 _FCTRY <FOKO_STATE_IDENTIFIER> {0:1}
-1 MAP {0:1}
-2 LATI <PLACE_LATITUDE> {1:1}
-2 LONG <PLACE_LONGITUDE> {1:1}
-1 _MAIDENHEAD <MAIDENHEAD_LOCATOR> {0:1}
-1 EVEN [<EVENT_DESCRIPTOR>|<NULL>] {0:M}
-2 <<EVENT_DETAIL>> {0:1}
-1 _LOC @<XREF:_LOC>@ 0:M
-2 TYPE <HIERARCHICAL_RELATIONSHIP> {1:1}
-2 DATE <DATE_VALUE> {0:1}
-2 <<SOURCE_CITATION>> {0:M}
-1 _DMGD <DEMOGRAPHICAL_DATA> {0:M}
-2 DATE <DATE_VALUE> {0:1}
-2 <<SOURCE_CITATION>> {0:M}
-2 TYPE <TYPE_OF_DEMOGRAPICAL_DATA> 1:1
-1 _AIDN <ADMINISTRATIVE_IDENTIFIER> {0:M}
-2 DATE <DATE_VALUE> {0:1}
-2 <<SOURCE_CITATION>> {0:M}
-2 TYPE <TYPE_OF_ADMINISTRATIVE_IDENTIFIER> {1:1}
-1 <<MULTIMEDIA_LINK>> {0:M}
-1 <<NOTE_STRUCTURE>> {0:M}
-1 <<SOURCE_CITATION>> {0:M}
+LOCATION_RECORD:= 
+0 @<XREF:_LOC>@ _LOC {1:1} 
+1 NAME <PLACE_NAME> {1:M} 
+2 DATE <DATE_VALUE> {0:1} 
+2 ABBR <ABBREVIATION_OF_NAME> {0:M} 
+3 TYPE <TYPE_OF_ABBREVIATION> {0:1} 
+2 LANG <LANGUAGE_ID> {0:1} 
+2 <<SOURCE_CITATION>> {0:M} 
+1 TYPE <TYPE_OF_LOCATION> {0:M} 
+2 _GOVTYPE <GOVID_OF_TYPE> {0:1} 
+2 DATE <DATE_VALUE> {0:1} 
+2 <<SOURCE_CITATION>> {0:M} 
+1 _POST <POSTAL_CODE> {0:M} 
+2 DATE <DATE_VALUE> {0:1} 
+2 <<SOURCE_CITATION>> {0:M} 
+1 _GOV <GOV_IDENTIFIER> {0:1} 
+1 MAP {0:1} 
+2 LATI <PLACE_LATITUDE> {1:1} 
+2 LONG <PLACE_LONGITUDE> {1:1} 
+1 _MAIDENHEAD <MAIDENHEAD_LOCATOR> {0:1} 
+1 RELI <DENOMINATION> {0:1} 
+1 EVEN [<EVENT_DESCRIPTOR>|<NULL>] {0:M} 
+2 <<EVENT_DETAIL>> {0:1} 
+1 _LOC @<XREF:_LOC>@ {0:M} 
+2 TYPE <HIERARCHICAL_RELATIONSHIP> {1:1} 
+2 DATE <DATE_VALUE> {0:1} 
+2 <<SOURCE_CITATION>> {0:M} 
+1 _DMGD <DEMOGRAPHICAL_DATA> {0:M} 
+2 DATE <DATE_VALUE> {0:1} 
+2 <<SOURCE_CITATION>> {0:M} 
+2 TYPE <TYPE_OF_DEMOGRAPICAL_DATA> {1:1} 
+1 _AIDN <ADMINISTRATIVE_IDENTIFIER> {0:M} 
+2 DATE <DATE_VALUE> {0:1} 
+2 <<SOURCE_CITATION>> {0:M} 
+2 TYPE <TYPE_OF_ADMINISTRATIVE_IDENTIFIER> {1:1} 
+1 <<MULTIMEDIA_LINK>> {0:M} 
+1 <<NOTE_STRUCTURE>> {0:M} 
+1 <<SOURCE_CITATION>> {0:M} 
 1 <<CHANGE_DATE>> {0:1}
 ~~~~
 
