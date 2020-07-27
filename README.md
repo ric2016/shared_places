@@ -79,7 +79,7 @@ Note that currently only selected parts of this structure are displayed and supp
 * Requires the Hooks module ('hooks_repackaged', or the original Hooks module via webtrees-geneajaubart). 
 * Requires the 'vesta_common_lib' module.
 * Displays data via the 'personal_facts_with_hooks' module.
-* Download the zipped module, including all related modules, [here](https://cissee.de/vesta.latest.zip).
+* Download the zipped module, including all related modules, [here](https://cissee.de/vesta.legacy.zip).
 * Support, suggestions, feature requests: <ric@richard-cissee.de>
 * Issues also via <https://github.com/ric2016/shared_places/issues>
 
